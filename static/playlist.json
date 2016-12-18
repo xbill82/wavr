@@ -1,0 +1,18 @@
+{
+  "tracks": [
+    {
+      "file": "tema.mp3",
+      "title": "Lagrimas Negras",
+      "markers": [
+        {
+          "label": "Marker 1",
+          "time": "00:29"
+        },
+        {
+          "label": "Marker 2",
+          "time": "01:14"
+        }
+      ]
+    }
+  ]
+}
