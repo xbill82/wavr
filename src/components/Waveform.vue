@@ -2,7 +2,7 @@
   <div class="waveform">
     <div 
       tabindex="0"
-      class="no-borders"
+      class="wave-container"
       @keyup.space="togglePlay"
       @keyup.next="onNextButtonPressed"
       @keyup.prev="onPrevButtonPressed"
@@ -32,7 +32,9 @@ export default {
     this.waveform = window.waveform = WaveSurfer.create({
       container: this.$refs.waveform,
       waveColor: '#1be395',
-      progressColor: '#169966'
+      progressColor: '#169966',
+      barWidth: 2,
+      height: 160
     })
     this.waveform.on('ready', () => {
       this.$store.commit(SET_CURRENT_TRACK_DURATION, this.waveform.getDuration())
@@ -96,7 +98,10 @@ export default {
 </script>
 
 <style>
-.no-borders:focus {
+.wave-container {
+  padding-top: 50px;
+}
+.wave-container:focus {
   outline: none;
 }
 </style>

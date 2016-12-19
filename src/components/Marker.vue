@@ -3,7 +3,8 @@
     class="marker"
     :class="{next: isNext}"
     :style="{left: position + 'px'}">
-    <span class="text">[{{time}}] {{label}}</span>
+    <div class="text">[{{time}}]</div>
+    <div class="text">{{label}}</div>
   </div>
 </template>
 
@@ -23,7 +24,7 @@ export default {
 .marker {
   position: absolute;
   top: 0;
-  height: 128px;
+  height: 210px;
   border-left: solid 1px #169966;
   z-index: 4;
 }
