@@ -2,10 +2,12 @@
   <div id="app">
     <div v-if="!playlist">Loading...</div>
     <div v-else>
-      <div v-if="currentTrack">
+      <div
+        class="track-title"
+        v-if="currentTrack">
         {{currentTrack.title}}
       </div>
-      <div>
+      <div class="progress">
         {{secondsToTime(progress)}}
       </div>
       <next-marker
@@ -29,6 +31,8 @@
 </template>
 
 <script>
+import {} from 'assets/fonts.css'
+
 import { mapGetters } from 'vuex'
 import Waveform from './Components/Waveform'
 import WaveMarker from './Components/Marker'
@@ -99,7 +103,7 @@ body {
   background-color: #0c2b2d;
 }
 #app {
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Mono', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #169966;
