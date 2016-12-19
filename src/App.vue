@@ -8,13 +8,17 @@
       <div>
         Next marker: {{nextMarker.label}}
       </div>
+      <div>
+        Time to next marker: -{{timeToNextMarker}}
+      </div>
       <div class="wave-and-markers">
         <wave-marker
           v-for="marker in currentMarkers"
           :key="marker.timestamp"
           :position="timeToMarkerPosition(marker.time)"
           :time="marker.time"
-          :label="marker.label">        
+          :label="marker.label"
+          :is-next="marker.timestamp === nextMarker.timestamp ">
         </wave-marker>
         <waveform
           @progress="updateProgress">
@@ -61,6 +65,9 @@ export default {
       return this.currentMarkers.find(marker => {
         return marker.timestamp > this.progress
       })
+    },
+    timeToNextMarker () {
+      return secondsToTime(Number(this.nextMarker.timestamp) - Number(this.progress))
     },
     ...mapGetters([
       'currentTrack',

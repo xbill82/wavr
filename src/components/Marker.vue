@@ -1,6 +1,7 @@
 <template>
   <div
     class="marker"
+    :class="{next: isNext}"
     :style="{left: position + 'px'}">
     <span class="text">[{{time}}] {{label}}</span>
   </div>
@@ -9,7 +10,7 @@
 <script>
 export default {
   name: 'Marker',
-  props: ['position', 'time', 'label'],
+  props: ['position', 'time', 'label', 'isNext'],
   computed: {
     formattedTime () {
       return '00:00'
@@ -25,6 +26,9 @@ export default {
   height: 128px;
   border-left: solid 1px #169966;
   z-index: 4;
+}
+.marker.next {
+  color: #34eea5;
 }
 .text {
   margin-left: 6px;
