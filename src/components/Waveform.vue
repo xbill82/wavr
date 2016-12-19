@@ -2,6 +2,7 @@
   <div class="waveform">
     <div 
       tabindex="0"
+      class="no-borders"
       @keyup.space="togglePlay"
       @keyup.next="onNextButtonPressed"
       @keyup.prev="onPrevButtonPressed"
@@ -28,7 +29,6 @@ export default {
     }
   },
   mounted () {
-    console.log('mounted')
     this.waveform = window.waveform = WaveSurfer.create({
       container: this.$refs.waveform,
       waveColor: '#1be395',
@@ -44,6 +44,9 @@ export default {
     })
     this.waveform.on('audioprocess', this.onProgress)
     this.$refs.waveform.focus()
+    this.$refs.waveform.addEventListener('blur', () => {
+      this.$refs.waveform.focus()
+    })
     this.loadCurrentTrack()
   },
   methods: {
@@ -71,9 +74,11 @@ export default {
       }
     },
     onNextButtonPressed () {
+      this.$store.commit(SET_IS_PLAYING, false)
       this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx + 1)
     },
     onPrevButtonPressed () {
+      this.$store.commit(SET_IS_PLAYING, false)
       this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx - 1)
     }
   },
@@ -89,3 +94,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.no-borders:focus {
+  outline: none;
+}
+</style>

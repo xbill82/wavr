@@ -2,15 +2,18 @@
   <div id="app">
     <div v-if="!playlist">Loading...</div>
     <div v-else>
-      <div
-        class="track-title"
-        v-if="currentTrack">
-        {{currentTrack.title}}
-      </div>
-      <div class="progress">
-        {{secondsToTime(progress)}}
+      <div class="block-1">
+        <div
+          class="track-title"
+          v-if="currentTrack">
+          {{currentTrack.title}}
+        </div>
+        <div class="progress">
+          {{secondsToTime(progress)}}
+        </div>
       </div>
       <next-marker
+        class="next-marker"
         :next-marker="nextMarker"
         :progress="progress">
       </next-marker>
@@ -111,5 +114,20 @@ body {
 .wave-and-markers {
   position: relative;
   margin-top: 60px;
+}
+.track-title {
+  font-size: 2em;
+}
+.progress {
+  font-size: 3em;
+}
+.block-1 {
+  display: inline-block;
+  width: 50%;
+}
+.next-marker {
+  color: #34eea5;
+  display: inline-block;
+  font-size: 2em;
 }
 </style>
