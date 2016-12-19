@@ -1,13 +1,13 @@
 <template>
   <div>
     <div v-if="nextMarker">
-      Next marker: {{nextMarker.label}}
+      Next: {{nextMarker.label}}
     </div>
     <div v-else>
-      Next marker: End of Track
+      Next: End of Track
     </div>
     <div>
-      Time to next marker: -{{timeToNextMarker}}
+      within -{{timeToNextMarker}}
     </div>
   </div>
 </template>

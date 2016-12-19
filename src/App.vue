@@ -110,6 +110,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #169966;
+  margin-top: 30px;
 }
 .wave-and-markers {
   position: relative;
@@ -119,11 +120,12 @@ body {
   font-size: 2em;
 }
 .progress {
-  font-size: 3em;
+  font-size: 4em;
 }
 .block-1 {
   display: inline-block;
   width: 50%;
+  margin-left: 30px;
 }
 .next-marker {
   color: #34eea5;
