@@ -8,7 +8,7 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     playlist: null,
-    currentTrackIdx: null,
+    currentTrackIdx: 0,
     waveformWidth: null,
     isPlaying: false
   },
@@ -20,7 +20,14 @@ export default new Vuex.Store({
       state.isPlaying = value
     },
     [types.SET_CURRENT_TRACK] (state, value) {
-      state.currentTrackIdx = value
+      if (!value) {
+        return
+      }
+      if (value > state.playlist.tracks.length) {
+        state.currentTrackIdx = 0
+      } else {
+        state.currentTrackIdx = value
+      }
     },
     [types.SET_CURRENT_TRACK_DURATION] (state, value) {
       Vue.set(state.playlist.tracks[state.currentTrackIdx], 'duration', value)
@@ -37,6 +44,9 @@ export default new Vuex.Store({
       return state.waveformWidth / getters.currentTrack.duration
     },
     currentMarkers (state, getters) {
+      if (!getters.currentTrack) {
+        return []
+      }
       return getters.currentTrack.markers.map(marker => {
         return {
           ...marker,

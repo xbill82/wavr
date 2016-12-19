@@ -2,15 +2,16 @@
   <div id="app">
     <div v-if="!playlist">Loading...</div>
     <div v-else>
+      <div v-if="currentTrack">
+        {{currentTrack.title}}
+      </div>
       <div>
         {{secondsToTime(progress)}}
       </div>
-      <div>
-        Next marker: {{nextMarker.label}}
-      </div>
-      <div>
-        Time to next marker: -{{timeToNextMarker}}
-      </div>
+      <next-marker
+        :next-marker="nextMarker"
+        :progress="progress">
+      </next-marker>
       <div class="wave-and-markers">
         <wave-marker
           v-for="marker in currentMarkers"
@@ -18,7 +19,7 @@
           :position="timeToMarkerPosition(marker.time)"
           :time="marker.time"
           :label="marker.label"
-          :is-next="marker.timestamp === nextMarker.timestamp ">
+          :isNext="isNextMarker(marker)">
         </wave-marker>
         <waveform
           @progress="updateProgress">
@@ -31,6 +32,7 @@
 import { mapGetters } from 'vuex'
 import Waveform from './Components/Waveform'
 import WaveMarker from './Components/Marker'
+import NextMarker from './Components/NextMarker'
 import {
   SET_PLAYLIST,
   SET_CURRENT_TRACK
@@ -44,7 +46,8 @@ export default {
   name: 'Wavr',
   components: {
     Waveform,
-    WaveMarker
+    WaveMarker,
+    NextMarker
   },
   data () {
     return {
@@ -66,9 +69,6 @@ export default {
         return marker.timestamp > this.progress
       })
     },
-    timeToNextMarker () {
-      return secondsToTime(Number(this.nextMarker.timestamp) - Number(this.progress))
-    },
     ...mapGetters([
       'currentTrack',
       'pxPerSec',
@@ -82,6 +82,12 @@ export default {
     },
     updateProgress (seconds) {
       this.progress = seconds
+    },
+    isNextMarker (marker) {
+      if (!this.nextMarker) {
+        return false
+      }
+      return marker.timestamp === this.nextMarker.timestamp
     },
     secondsToTime
   }

@@ -13,6 +13,7 @@ import WaveSurfer from 'wavesurfer'
 import {
   SET_IS_PLAYING,
   SET_WAVEFORM_WIDTH,
+  SET_CURRENT_TRACK,
   SET_CURRENT_TRACK_DURATION
 } from '../store/types'
 import { mapGetters } from 'vuex'
@@ -34,6 +35,10 @@ export default {
     this.waveform.on('ready', () => {
       this.$store.commit(SET_CURRENT_TRACK_DURATION, this.waveform.getDuration())
       this.$store.commit(SET_WAVEFORM_WIDTH, this.$refs.waveform.offsetWidth)
+    })
+    this.waveform.on('finish', () => {
+      this.$store.commit(SET_IS_PLAYING, false)
+      this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx + 1)
     })
     this.waveform.on('audioprocess', this.onProgress)
     this.$refs.waveform.focus()

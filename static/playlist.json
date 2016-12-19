@@ -13,6 +13,20 @@
           "time": "01:14"
         }
       ]
+    },
+    {
+      "file": "caboclo.mp3",
+      "title": "Caboclo",
+      "markers": [
+        {
+          "label": "Tralala",
+          "time": "01:09"
+        },
+        {
+          "label": "Tralalero",
+          "time": "01:44"
+        }
+      ]
     }
   ]
 }
