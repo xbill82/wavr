@@ -1,6 +1,7 @@
 import Vuex from 'vuex'
 import Vue from 'vue'
 import * as types from './types'
+import * as utils from '../utils'
 
 Vue.use(Vuex)
 
@@ -34,6 +35,14 @@ export default new Vuex.Store({
     },
     pxPerSec (state, getters) {
       return state.waveformWidth / getters.currentTrack.duration
+    },
+    currentMarkers (state, getters) {
+      return getters.currentTrack.markers.map(marker => {
+        return {
+          ...marker,
+          timestamp: utils.timeToSeconds(marker.time)
+        }
+      })
     }
   }
 })

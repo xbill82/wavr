@@ -6,12 +6,12 @@
         {{secondsToTime(progress)}}
       </div>
       <div>
-        Next marker:
+        Next marker: {{nextMarker.label}}
       </div>
       <div class="wave-and-markers">
         <wave-marker
-          v-for="marker in currentTrack.markers"
-          :key="Math.random()"
+          v-for="marker in currentMarkers"
+          :key="marker.timestamp"
           :position="timeToMarkerPosition(marker.time)"
           :time="marker.time"
           :label="marker.label">        
@@ -57,9 +57,15 @@ export default {
     playlist () {
       return this.$store.state.playlist
     },
+    nextMarker () {
+      return this.currentMarkers.find(marker => {
+        return marker.timestamp > this.progress
+      })
+    },
     ...mapGetters([
       'currentTrack',
-      'pxPerSec'
+      'pxPerSec',
+      'currentMarkers'
     ])
   },
   methods: {
