@@ -20,10 +20,11 @@ export default new Vuex.Store({
       state.isPlaying = value
     },
     [types.SET_CURRENT_TRACK] (state, value) {
-      if (!value) {
+      if (value === null || value === undefined) {
         return
       }
-      if (value > state.playlist.tracks.length) {
+      if (value > state.playlist.tracks.length - 1 ||
+          value < 0) {
         state.currentTrackIdx = 0
       } else {
         state.currentTrackIdx = value

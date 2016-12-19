@@ -3,6 +3,8 @@
     <div 
       tabindex="0"
       @keyup.space="togglePlay"
+      @keyup.next="onNextButtonPressed"
+      @keyup.prev="onPrevButtonPressed"
       ref="waveform">
     </div>
   </div>
@@ -67,6 +69,12 @@ export default {
       if (this.waveform && this.currentTrack && this.currentTrack.file) {
         this.waveform.load('static/' + this.currentTrack.file)
       }
+    },
+    onNextButtonPressed () {
+      this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx + 1)
+    },
+    onPrevButtonPressed () {
+      this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx - 1)
     }
   },
   computed: {
