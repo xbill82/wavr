@@ -57,3 +57,5 @@ Place your mp3 files into the `static` directory along with a `playlist.json` fi
   ]
 }
 ```
+
+Use the `spacebar` to toggle play and pause and use the `right arrow` to skip to the next song.
