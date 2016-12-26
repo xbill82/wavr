@@ -97,6 +97,11 @@ export default {
       return marker.timestamp === this.nextMarker.timestamp
     },
     secondsToTime
+  },
+  watch: {
+    currentTrack () {
+      this.progress = 0
+    }
   }
 }
 </script>

@@ -39,6 +39,9 @@ export default new Vuex.Store({
   },
   getters: {
     currentTrack (state) {
+      if (!state.playlist) {
+        return null
+      }
       return state.playlist.tracks[state.currentTrackIdx]
     },
     pxPerSec (state, getters) {
