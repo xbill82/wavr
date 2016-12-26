@@ -11,8 +11,8 @@
         <div class="progress">
           {{secondsToTime(progress)}}
         </div>
-      </div>
-      <next-marker
+      </div><!--
+      --><next-marker
         class="next-marker"
         :next-marker="nextMarker"
         :progress="progress">
@@ -124,18 +124,20 @@ body {
 }
 .track-title {
   font-size: 2em;
+  padding-left: 30px;
 }
 .progress {
   font-size: 4em;
+  padding-left: 30px;
 }
 .block-1 {
   display: inline-block;
   width: 50%;
-  margin-left: 30px;
 }
 .next-marker {
   color: #34eea5;
   display: inline-block;
   font-size: 2em;
+  width: 50%;
 }
 </style>

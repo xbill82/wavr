@@ -46,7 +46,7 @@
       ]
     },
     {
-      "file": "shine.mp4",
+      "file": "shine.mp3",
       "title": "Shine On You Crazy Diamond",
       "markers": [
         {
@@ -57,6 +57,10 @@
         {
           "label": "El coche arranca",
           "time": "03:55"
+        },
+        {
+          "time": "08:42",
+          "label": "Remember when we were young..."
         }
       ]
     }
