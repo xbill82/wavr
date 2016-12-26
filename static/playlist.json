@@ -22,7 +22,8 @@
         },
         {
           "label": "Lui parler",
-          "time": "04:07"
+          "time": "04:07",
+          "pullUp": true
         },
         {
           "label": "Tum-tum",
@@ -49,11 +50,12 @@
       "title": "Shine On You Crazy Diamond",
       "markers": [
         {
-          "label": "vente",
-          "time": "02:36"
+          "label": "Te vienes con nosotros",
+          "time": "02:36",
+          "pullUp": true
         },
         {
-          "label": "vamos",
+          "label": "El coche arranca",
           "time": "03:55"
         }
       ]

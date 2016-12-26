@@ -99,7 +99,7 @@ export default {
 
 <style>
 .wave-container {
-  padding-top: 50px;
+  padding-top: 150px;
 }
 .wave-container:focus {
   outline: none;

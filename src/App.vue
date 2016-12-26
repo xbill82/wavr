@@ -24,6 +24,7 @@
           :position="timeToMarkerPosition(marker.time)"
           :time="marker.time"
           :label="marker.label"
+          :pull-up="marker.pullUp"
           :isNext="isNextMarker(marker)">
         </wave-marker>
         <waveform
