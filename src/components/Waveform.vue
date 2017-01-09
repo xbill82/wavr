@@ -3,7 +3,7 @@
     <div 
       tabindex="0"
       class="wave-container"
-      @keyup.space="togglePlay"
+      @keyup.play="togglePlay"
       @keyup.next="onNextButtonPressed"
       @keyup.prev="onPrevButtonPressed"
       ref="waveform">

@@ -3,8 +3,9 @@ import App from './App'
 import store from './store'
 
 Vue.config.keyCodes = {
-  next: [39],
-  prev: [37]
+  next: [51, 39],
+  prev: [49, 37],
+  play: [50, 32]
 }
 
 /* eslint-disable no-new */
