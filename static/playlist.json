@@ -1,49 +1,8 @@
 {
   "tracks": [
     {
-      "file": "train.mp3",
-      "title": "Train",
-      "markers": [
-        {
-          "label": "Ses yeux",
-          "time": "01:01"
-        },
-        {
-          "label": "Mon doigt",
-          "time": "01:33"
-        },
-        {
-          "label": "Chercher...",
-          "time": "02:07"
-        },
-        {
-          "label": "Trouvée",
-          "time": "03:07"
-        },
-        {
-          "label": "Lui parler",
-          "time": "04:07",
-          "pullUp": true
-        },
-        {
-          "label": "Tum-tum",
-          "time": "04:20"
-        }
-      ]
-    },
-    {
-      "file": "train-2.mp3",
-      "title": "Train 2",
-      "markers": [
-        {
-          "label": "une voix",
-          "time": "00:15"
-        },
-        {
-          "label": "j'ai couru",
-          "time": "01:01"
-        }
-      ]
+      "file": "sersilencio.mp3",
+      "title": "Quiero Ser Silencio"
     },
     {
       "file": "shine.mp3",
@@ -51,18 +10,22 @@
       "markers": [
         {
           "label": "Te vienes con nosotros",
-          "time": "02:36",
+          "time": "02:29",
           "pullUp": true
         },
         {
-          "label": "El coche arranca",
-          "time": "03:55"
+          "label": "La voiture démarre",
+          "time": "03:47"
         },
         {
-          "time": "08:42",
+          "time": "08:26",
           "label": "Remember when we were young..."
         }
       ]
+    },
+    {
+      "file": "otravez.mp3",
+      "title": "Otra Vez La Lluvia"
     },
     {
       "file": "transporte.mp3",

@@ -48,7 +48,7 @@ export default new Vuex.Store({
       return state.waveformWidth / getters.currentTrack.duration
     },
     currentMarkers (state, getters) {
-      if (!getters.currentTrack) {
+      if (!getters.currentTrack || !getters.currentTrack.markers) {
         return []
       }
       return getters.currentTrack.markers.map(marker => {

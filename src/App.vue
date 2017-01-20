@@ -11,6 +11,10 @@
         <div class="progress">
           {{secondsToTime(progress)}}
         </div>
+        <div class="playback-indicator">
+          <span v-if="$store.state.isPlaying">>></span>
+          <span v-else>||</span>
+        </div>
       </div><!--
       --><next-marker
         class="next-marker"
@@ -133,6 +137,12 @@ body {
 .block-1 {
   display: inline-block;
   width: 50%;
+}
+.playback-indicator {
+  font-size: 3em;
+  font-weight: bold;
+  padding-left: 30px;
+  color: #1be395;
 }
 .next-marker {
   color: #34eea5;
