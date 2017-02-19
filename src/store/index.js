@@ -44,6 +44,21 @@ export default new Vuex.Store({
       }
       return state.playlist.tracks[state.currentTrackIdx]
     },
+    currentTrackType (state, getters) {
+      if (!getters.currentTrack || !getters.currentTrack.type) {
+        return null
+      }
+
+      return getters.currentTrack.type
+    },
+    currentSubtitlesTrack (state, getters) {
+      if (!getters.currentTrack || !getters.currentTrack.type ||
+          getters.currentTrack.type !== 'Subtitles') {
+        return null
+      }
+
+      return getters.currentTrack
+    },
     pxPerSec (state, getters) {
       return state.waveformWidth / getters.currentTrack.duration
     },
