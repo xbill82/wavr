@@ -1,6 +1,5 @@
 <template>
   <div>
-    This is Master
     <component
     :is="currentTrackType"
     :track="currentTrack"

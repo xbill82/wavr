@@ -2,15 +2,12 @@
   "tracks": [
     {
       "type": "Subtitles",
+      "title": "Avignon",
       "list": [
         "J’ai pris mon premier train à Grenade en 2004. J’ai choisi cette ville pour devenir adulte et être poète. Ce que je ne savais pas, c’est que j’allais faire du théâtre.",
         "Je suis tombé amoureux d’une camarade de l’école d’art dramatique et nous avons préparé un spectacle de rue, pour travailler au festival d’Avignon.",
         "Après notre première représentation, elle a décidé de jouer toute seule, de son coté, et moi j’ai mis mon costume de clown, je suis monté sur un mur à l’entrée du Palais des Papes et je suis resté immobile, à l’attente des pièces de monnaie qui allaient me faire bouger."
       ]
-    },
-    {
-      "type": "Subtitles",
-      "file": "test.html"
     },
     {
       "type": "Sound",
