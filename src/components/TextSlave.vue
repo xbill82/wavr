@@ -1,9 +1,7 @@
 <template>
   <div>
     This is Slave
-    <div>
-      {{currentTextBlob}}
-    </div>
+    <div v-html="currentTextBlob"></div>
   </div>
 </template>
 

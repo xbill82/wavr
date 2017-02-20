@@ -27,7 +27,8 @@ export default {
   data () {
     return {
       currentIndex: -1,
-      slaveWindow: null
+      slaveWindow: null,
+      blobFromFile: null
     }
   },
   computed: {
@@ -51,19 +52,24 @@ export default {
         return this.track.list
       }
       if (this.track.file) {
-        return this.track.file
+        return [ this.blobFromFile ]
       }
     }
   },
   mounted () {
-    console.log('mounting container')
     this.slaveWindow = getSlaveWindow()
     this.$refs.container.focus()
+    if (this.track.file) {
+      this.loadBlobFile(this.track.file)
+    }
     // this.$refs.container.addEventListener('blur', () => {
     //   this.$refs.container.focus()
     // })
   },
   methods: {
+    loadBlobFile (file) {
+      this.blobFromFile = require('../../static/' + file + '.html')
+    },
     onNextButtonPressed () {
       console.log('NEXT')
       if (this.currentIndex === this.textList.length - 1) {

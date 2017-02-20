@@ -10,6 +10,11 @@
       ]
     },
     {
+      "type": "Subtitles",
+      "title": "Antoine y Anais - 1",
+      "file": "poema-1"
+    },
+    {
       "type": "Sound",
       "file": "sersilencio.mp3",
       "title": "Quiero Ser Silencio"
