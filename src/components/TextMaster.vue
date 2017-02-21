@@ -5,7 +5,6 @@
       class="track-title"
       ref="container"
       tabindex="0"
-      @click="onNextButtonPressed"
       @keyup.next="onNextButtonPressed"
       @keyup.prev="onPrevButtonPressed">
       {{track.title}}
@@ -64,16 +63,12 @@ export default {
   mounted () {
     this.slaveWindow = getSlaveWindow()
     this.$refs.container.focus()
-    if (this.track.file) {
-      this.loadBlobFile(this.track.file)
-    }
     this.$refs.container.addEventListener('blur', () => {
       this.$refs.container.focus()
     })
   },
   methods: {
     onNextButtonPressed () {
-      console.log('NEXT')
       if (this.currentIndex === this.textList.length - 1) {
         this.currentIndex = -1
         this.sendBlobToSlave('')
@@ -115,9 +110,6 @@ export default {
   .current-text {
     margin-bottom: 30px;
     color: #1be395;
-    font-size: 1.5em;
-  }
-  .next-text {
     font-size: 1.5em;
   }
 </style>
