@@ -1,7 +1,8 @@
 <template>
   <div>
-    This is Slave
-    <div v-html="currentTextBlob"></div>
+    <div
+      class="blob-container" 
+      v-html="currentTextBlob"></div>
   </div>
 </template>
 
@@ -20,3 +21,16 @@ export default {
   }
 }
 </script>
+
+<style>
+  body {
+    background-color: #000;
+  }
+  .blob-container {
+    color: #FFF;
+    font-family: Helvetica, Arial;
+    font-size: 2em;
+    padding: 30px;
+    text-align: center;
+  }
+</style>

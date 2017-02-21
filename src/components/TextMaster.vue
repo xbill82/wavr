@@ -10,11 +10,16 @@
       @keyup.prev="onPrevButtonPressed">
       {{track.title}}
     </div>
-    <div v-if="currentIndex < 0">
-      Press "next" to begin
+    <div class="blob-block">
+      Currently displaying:
+      <div
+        class="current-text"
+        v-html="currentTextBlob"></div>
+      Next:
+      <div
+        class="next-text"
+        v-html="nextTextBlob"></div>
     </div>
-    <div class="current-text">{{currentTextBlob}}</div>
-    <div class="next-text">{{nextTextBlob}}</div>      
   </div>
 </template>
 
@@ -99,3 +104,20 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .track-title:focus {
+    outline: none;
+  }
+  .blob-block {
+    padding: 30px;
+  }
+  .current-text {
+    margin-bottom: 30px;
+    color: #1be395;
+    font-size: 1.5em;
+  }
+  .next-text {
+    font-size: 1.5em;
+  }
+</style>
