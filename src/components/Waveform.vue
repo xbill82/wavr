@@ -46,9 +46,9 @@ export default {
     })
     this.waveform.on('audioprocess', this.onProgress)
     this.$refs.waveform.focus()
-    // this.$refs.waveform.addEventListener('blur', () => {
-    //   this.$refs.waveform.focus()
-    // })
+    this.$refs.waveform.addEventListener('blur', () => {
+      this.$refs.waveform.focus()
+    })
     this.loadCurrentTrack()
   },
   methods: {

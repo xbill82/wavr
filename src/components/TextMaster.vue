@@ -4,6 +4,7 @@
     <div 
       class="track-title"
       ref="container"
+      tabindex="0"
       @click="onNextButtonPressed"
       @keyup.next="onNextButtonPressed"
       @keyup.prev="onPrevButtonPressed">
@@ -27,8 +28,7 @@ export default {
   data () {
     return {
       currentIndex: -1,
-      slaveWindow: null,
-      blobFromFile: null
+      slaveWindow: null
     }
   },
   computed: {
@@ -52,7 +52,7 @@ export default {
         return this.track.list
       }
       if (this.track.file) {
-        return [ this.blobFromFile ]
+        return [ require('../../static/' + this.track.file + '.html') ]
       }
     }
   },
@@ -62,14 +62,11 @@ export default {
     if (this.track.file) {
       this.loadBlobFile(this.track.file)
     }
-    // this.$refs.container.addEventListener('blur', () => {
-    //   this.$refs.container.focus()
-    // })
+    this.$refs.container.addEventListener('blur', () => {
+      this.$refs.container.focus()
+    })
   },
   methods: {
-    loadBlobFile (file) {
-      this.blobFromFile = require('../../static/' + file + '.html')
-    },
     onNextButtonPressed () {
       console.log('NEXT')
       if (this.currentIndex === this.textList.length - 1) {
@@ -83,9 +80,12 @@ export default {
     },
     onPrevButtonPressed () {
       if (this.currentIndex < 0) {
+        this.sendBlobToSlave('')
+        this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx - 1)
         return
       }
       this.currentIndex--
+      this.sendBlobToSlave(this.currentTextBlob)
     },
     sendBlobToSlave (blob) {
       if (!this.slaveWindow) {
