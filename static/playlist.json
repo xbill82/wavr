@@ -2,27 +2,75 @@
   "tracks": [
     {
       "type": "Subtitles",
+      "title": "Noche Negra",
+      "file": "poema-1"
+    },
+    {
+      "type": "Subtitles",
+      "title": "Sin título",
+      "file": "poema-2"
+    },
+    {
+      "type": "Subtitles",
+      "title": "Hogar",
+      "file": "poema-3"
+    },
+    {
+      "type": "Subtitles",
+      "title": "Al menos esta noche",
+      "file": "poema-4"
+    },
+    {
+      "type": "Subtitles",
       "title": "Avignon",
       "list": [
         "J’ai pris mon premier train à Grenade en 2004. J’ai choisi cette ville pour devenir adulte et être poète. Ce que je ne savais pas, c’est que j’allais faire du théâtre.",
         "Je suis tombé amoureux d’une camarade de l’école d’art dramatique et nous avons préparé un spectacle de rue, pour travailler au festival d’Avignon.",
-        "Après notre première représentation, elle a décidé de jouer toute seule, de son coté, et moi j’ai mis mon costume de clown, je suis monté sur un mur à l’entrée du Palais des Papes et je suis resté immobile, à l’attente des pièces de monnaie qui allaient me faire bouger."
+        "Après notre première représentation, elle a décidé de jouer toute seule et moi, d’aller à la place du Palais des Papes. J’ai mis mon costume de clown, je suis monté sur un mur et je suis resté immobile, à l’attente des pièces de monnaie qui allaient me faire bouger.",
+        "Après quelques minutes, deux groupes d’épéistes avec perruques victoriennes se sont plantés devant moi en faisant choquer leurs épées en déclamant des vers de Molière. Ils m’ont rendu complètement invisible.",
+        "Je suis descendu du mur et j’ai marché jusqu’au centre de la place. J’ai monté quelques marches de l’escalier et je me suis immobilisé à nouveau, toujours en attente des pièces de monnaie.",
+        "Deux-cents tambours ont sonné derrière moi pendant que des mammouths géants faisaient leur entrée dans la place. Dedans, des musiciens d’heavy metal jouaient des chansons électriques, pendant que les animaux crachaient du feu. Bien évidemment, ça m’a rendu invisible.",
+        "Je suis descendu de l’escalier et je suis parti dans une impasse à l’autre bout de la place, pour m’installer sous un lampion éteint. C’était une toute petite impasse que personne ne fréquentait, même pas pour pisser. L’endroit parfait pour pouvoir faire tranquillement la statue humaine.",
+        "Peu de temps après, une vieille dame a marché jusqu’á mon emplacement, a ouvert son porte-monnaie, en a sorti deux euros pour les mettre dans mon chapeau. « Ça fait toute l’après-midi que je te vois » m’a dit elle.",
+        "Elle a fait demi-tour et s’est frayée un chemin à travers de l’énorme place, je l’ai vu se perdre entre le tonnerre des tambours, les mammouths géants qui crachaient du feu au rythme du heavy metal et les épéistes qui déclamaient Molière."
       ]
     },
     {
       "type": "Subtitles",
-      "title": "Antoine y Anais - 1",
-      "file": "poema-1"
+      "title": "Uno",
+      "file": "poema-5"
     },
     {
-      "type": "Sound",
-      "file": "sersilencio.mp3",
-      "title": "Quiero Ser Silencio"
+      "type": "Subtitles",
+      "title": "El precio de la gasolina",
+      "list": [
+        "Le feu est passé au vert. Nous nous sommes garés, ma compagne et moi, au parking de la gare de Granada. Nous avons mis fin à notre relation sur le quai. Je suis monté dans le train en pleurant et je me suis assis à ma place.",
+        "A ma gauche il y avait une famille de gitans qui parlait très fort. En face, un punk. A ma droite, un jeune motard et en face de lui je crois qu’il y avait une fille qui écoutait de la musique. Je voulais voir personne.",
+        "Je suis resté en silence et j’ai écouté les gitans qui parlaient de leur business de vente et achat de vêtements. Lorsque le contrôleur est passé, je lui ai demandé si je pouvais être changé de place. Mais j’ai pas eu de chance.",
+        "La famille était entièrement habillée en survêtements et chaines en or, ils étaient chargés de sacs et valises. Chacun hurlait sans écouter les autre.",
+        "- Pourquoi pleures-tu?<br/>M’a demandé le punk.",
+        "Le punk n’avait pas l’air tout à fait punk, mais on voyait bien qu’il avait été très punk à un moment et maintenant il l’était beaucoup moins, mais il gardait l’aura punk sur lui. J’ai pas voulu répondre à sa question, alors on a parlé du système, puis de musique, puis à nouveau du système et enfin du prix de l’essence.",
+        "Le motard a dit qu’il voyageait partout en Espagne avec sa moto et que le prix de l’essence avait incroyablement augmenté. En suite, il nous a raconté pourquoi il était dans ce train.",
+        "Il rentrait après avoir vu sa copine. Ils avaient eu un coup de foudre trois ans avant, lorsqu’il s’est rendu à Grenade pour acheter des pièces détachées de moto qu’elle vendait.",
+        "Les pièces venaient de la moto de son frère, qui était mort dans un accident, quelques mois avant. Pour cette raison là, lorsqu’il allait la voir à Grenade, il voyageait en train.",
+        "La fille ainée de la famille gitane a hurlé que l’essence c’était de l’arnaque et qu’il valait mieux voyager en train, car c’était moins cher. Alors on a passé tout le voyage à hurler et à débattre, en étant toujours d’accord sur tout.",
+        "Le motard est descendu à Valence et les autres on a continué le voyage jusqu’à Barcelone. A la gare de Sants on s’est dit au revoir et j’ai vu le punk partir d’un coté et la famille de gitans de l’autre. Puis j’ai acheté le billet de train de proximité qui m’amènerait jusqu’à chez mon père."
+      ]
     },
     {
-      "type": "Sound",
-      "file": "casimir.mp3",
-      "title": "Casimir Polansky Day"
+      "type": "Subtitles",
+      "title": "La Cabeza del Diablo",
+      "file": "poema-6"
+    },
+    {
+      "type": "Subtitles",
+      "title": "Las olas en el acantilado",
+      "file": "poema-7"
+    },
+    {
+      "type": "Subtitles",
+      "title": "La raíz de la noche",
+      "file": "poema-8"
     },
     {
       "type": "Sound",
@@ -45,9 +93,9 @@
       ]
     },
     {
-      "type": "Sound",
-      "file": "otravez.mp3",
-      "title": "Otra Vez La Lluvia"
+      "type": "Subtitles",
+      "title": "Todavía el agua",
+      "file": "poema-9"
     },
     {
       "type": "Sound",
