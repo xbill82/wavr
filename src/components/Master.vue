@@ -85,6 +85,7 @@ export default {
     },
     onPrevButtonPressed () {
       this.$events.fire('prev-button-pressed')
+      console.log('decrement!')
       this.$store.commit(DECREMENT_HEAD)
     },
     onPlayButtonPressed () {

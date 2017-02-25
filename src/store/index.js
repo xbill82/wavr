@@ -24,11 +24,11 @@ export default new Vuex.Store({
     },
     [types.INCREMENT_HEAD] (state) {
       if (state.playlist.tracks[state.head.track].subtitles &&
-          state.head.subtitle < state.playlist.tracks[state.head.track].subtitles.length) {
+          state.head.subtitle < state.playlist.tracks[state.head.track].subtitles.length - 1) {
         state.head.subtitle++
       } else {
         state.head.subtitle = -1
-        if (state.head.track < state.playlist.tracks.length) {
+        if (state.head.track < state.playlist.tracks.length - 1) {
           state.head.track++
         } else {
           state.head.track = 0
@@ -36,7 +36,15 @@ export default new Vuex.Store({
       }
     },
     [types.DECREMENT_HEAD] (state) {
-
+      if (state.playlist.tracks[state.head.track].subtitles &&
+          state.head.subtitle >= 0) {
+        state.head.subtitle--
+      } else {
+        state.head.subtitle = -1
+        if (state.head.track > 0) {
+          state.head.track--
+        }
+      }
     },
     [types.SET_CURRENT_TRACK] (state, value) {
       if (value === null || value === undefined) {
