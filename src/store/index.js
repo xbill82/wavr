@@ -9,7 +9,11 @@ export default new Vuex.Store({
     playlist: null,
     currentTrackIdx: 0,
     waveformWidth: null,
-    isPlaying: false
+    isPlaying: false,
+    head: {
+      track: 0,
+      subtitle: -1
+    }
   },
   mutations: {
     [types.SET_PLAYLIST] (state, playlist) {
@@ -17,6 +21,22 @@ export default new Vuex.Store({
     },
     [types.SET_IS_PLAYING] (state, value) {
       state.isPlaying = value
+    },
+    [types.INCREMENT_HEAD] (state) {
+      if (state.playlist.tracks[state.head.track].subtitles &&
+          state.head.subtitle < state.playlist.tracks[state.head.track].subtitles.length) {
+        state.head.subtitle++
+      } else {
+        state.head.subtitle = -1
+        if (state.head.track < state.playlist.tracks.length) {
+          state.head.track++
+        } else {
+          state.head.track = 0
+        }
+      }
+    },
+    [types.DECREMENT_HEAD] (state) {
+
     },
     [types.SET_CURRENT_TRACK] (state, value) {
       if (value === null || value === undefined) {
@@ -45,7 +65,7 @@ export default new Vuex.Store({
       if (!state.playlist) {
         return null
       }
-      return state.playlist.tracks[state.currentTrackIdx]
+      return state.playlist.tracks[state.head.track]
     },
     currentTrackType (state, getters) {
       if (!getters.currentTrack || !getters.currentTrack.type) {

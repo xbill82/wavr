@@ -1,8 +1,14 @@
 {
   "tracks": [
     {
-      "type": "Sound",
       "title": "Shine On You Crazy Diamond",
+      "subtitles": [{
+        "file": "poema-6"
+      }, {
+        "file": "poema-7"
+      }, {
+        "file": "poema-8"
+      }],
       "sound": {
         "file": "shine.mp3",
         "markers": [
@@ -23,35 +29,30 @@
       }
     },
     {
-      "type": "Subtitles",
       "title": "Noche Negra",
       "subtitles": [{
         "file": "poema-1"
       }]
     },
     {
-      "type": "Subtitles",
       "title": "Sin título",
       "subtitles": [{
         "file": "poema-2"
       }]
     },
     {
-      "type": "Subtitles",
       "title": "Hogar",
       "subtitles": [{
         "file": "poema-3"
       }]
     },
     {
-      "type": "Subtitles",
       "title": "Al menos esta noche",
       "subtitles": [{
         "file": "poema-4"
       }]
     },
     {
-      "type": "Subtitles",
       "title": "Avignon",
       "subtitles": [
         "J’ai pris mon premier train à Grenade en 2004. J’ai choisi cette ville pour devenir adulte et être poète. Ce que je ne savais pas, c’est que j’allais faire du théâtre.",
@@ -66,14 +67,12 @@
       ]
     },
     {
-      "type": "Subtitles",
       "title": "Uno",
       "subtitles": [{
         "file": "poema-5"
       }]
     },
     {
-      "type": "Subtitles",
       "title": "El precio de la gasolina",
       "subtitles": [
         "Le feu est passé au vert. Nous nous sommes garés, ma compagne et moi, au parking de la gare de Granada. Nous avons mis fin à notre relation sur le quai. Je suis monté dans le train en pleurant et je me suis assis à ma place.",
@@ -90,35 +89,12 @@
       ]
     },
     {
-      "type": "Subtitles",
-      "title": "La Cabeza del Diablo",
-      "subtitles": [{
-        "file": "poema-6"
-      }]
-    },
-    {
-      "type": "Subtitles",
-      "title": "Las olas en el acantilado",
-      "subtitles": [{
-        "file": "poema-7"
-      }]
-    },
-    {
-      "type": "Subtitles",
-      "title": "La raíz de la noche",
-      "subtitles": [{
-        "file": "poema-8"
-      }]
-    },
-    {
-      "type": "Subtitles",
       "title": "Todavía el agua",
       "subtitles": [{
         "file": "poema-9"
       }]
     },
     {
-      "type": "Sound",
       "title": "Transporte",
       "sound": {
         "file": "transporte.mp3",    

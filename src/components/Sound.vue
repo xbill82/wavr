@@ -1,11 +1,6 @@
 <template>
   <div>
-    <div class="block-1" >
-      <div
-        class="track-title"
-        v-if="sound">
-        {{sound.title}}
-      </div>
+    <div>
       <div class="progress">
         {{secondsToTime(progress)}}
       </div>
@@ -13,8 +8,8 @@
         <span v-if="$store.state.isPlaying">>></span>
         <span v-else>||</span>
       </div>
-    </div><!--
-    --><next-marker
+    </div>
+    <next-marker
       class="next-marker"
       :next-marker="nextMarker"
       :progress="progress">
@@ -116,22 +111,14 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .wave-and-markers {
   position: relative;
   margin-top: 60px;
 }
-.track-title {
-  font-size: 2em;
-  padding-left: 30px;
-}
 .progress {
   font-size: 4em;
   padding-left: 30px;
-}
-.block-1 {
-  display: inline-block;
-  width: 50%;
 }
 .playback-indicator {
   font-size: 3em;

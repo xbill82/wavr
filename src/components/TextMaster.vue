@@ -1,9 +1,6 @@
 <template>
   <div
     class="text-master">
-    <div class="track-title">
-      {{track.title}}
-    </div>
     <div class="blob-block">
       Currently displaying:
       <div
@@ -18,18 +15,15 @@
 </template>
 
 <script>
-import { SET_CURRENT_TRACK } from '../store/types'
 import { getSlaveWindow } from '../services/window'
 
 export default {
   name: 'TextMaster',
   props: ['track'],
-  data () {
-    return {
-      currentIndex: -1
-    }
-  },
   computed: {
+    currentIndex () {
+      return this.$store.state.head.subtitle
+    },
     nextTextBlob () {
       if (this.currentIndex === this.subtitles.length - 1) {
         return null
@@ -56,25 +50,25 @@ export default {
       }
       return subtitle
     },
-    onNextButtonPressed () {
-      if (this.currentIndex === this.subtitles.length - 1) {
-        this.currentIndex = -1
-        this.sendBlobToSlave('')
-        this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx + 1)
-        return
-      }
-      this.currentIndex++
-      this.sendBlobToSlave(this.currentTextBlob)
-    },
-    onPrevButtonPressed () {
-      if (this.currentIndex < 0) {
-        this.sendBlobToSlave('')
-        this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx - 1)
-        return
-      }
-      this.currentIndex--
-      this.sendBlobToSlave(this.currentTextBlob)
-    },
+    // onNextButtonPressed () {
+    //   if (this.currentIndex === this.subtitles.length - 1) {
+    //     this.currentIndex = -1
+    //     this.sendBlobToSlave('')
+    //     this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx + 1)
+    //     return
+    //   }
+    //   this.currentIndex++
+    //   this.sendBlobToSlave(this.currentTextBlob)
+    // },
+    // onPrevButtonPressed () {
+    //   if (this.currentIndex < 0) {
+    //     this.sendBlobToSlave('')
+    //     this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx - 1)
+    //     return
+    //   }
+    //   this.currentIndex--
+    //   this.sendBlobToSlave(this.currentTextBlob)
+    // },
     sendBlobToSlave (blob) {
       let slaveWindow = getSlaveWindow()
       if (!slaveWindow) {
@@ -87,8 +81,8 @@ export default {
     }
   },
   mounted () {
-    this.$events.listen('next-button-pressed', this.onNextButtonPressed)
-    this.$events.listen('prev-button-pressed', this.onPrevButtonPressed)
+    // this.$events.listen('next-button-pressed', this.onNextButtonPressed)
+    // this.$events.listen('prev-button-pressed', this.onPrevButtonPressed)
   }
 }
 </script>

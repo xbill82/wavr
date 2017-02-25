@@ -12,7 +12,6 @@ import WaveSurfer from 'wavesurfer'
 import {
   SET_IS_PLAYING,
   SET_WAVEFORM_WIDTH,
-  SET_CURRENT_TRACK,
   SET_CURRENT_TRACK_DURATION
 } from '../store/types'
 
@@ -38,12 +37,11 @@ export default {
     })
     this.waveform.on('finish', () => {
       this.$store.commit(SET_IS_PLAYING, false)
-      this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx + 1)
+      // this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx + 1)
     })
     this.waveform.on('audioprocess', this.onProgress)
     this.loadCurrentTrack()
-    this.$events.listen('next-button-pressed', this.onNextButtonPressed)
-    this.$events.listen('prev-button-pressed', this.onPrevButtonPressed)
+    this.$events.listen('play-button-pressed', this.togglePlay)
   },
   methods: {
     togglePlay () {
@@ -68,18 +66,18 @@ export default {
       if (this.waveform && this.trackFile) {
         this.waveform.load('static/' + this.trackFile)
       }
-    },
-    onNextButtonPressed () {
-      this.$store.commit(SET_IS_PLAYING, false)
-      this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx + 1)
-    },
-    onPrevButtonPressed () {
-      this.$store.commit(SET_IS_PLAYING, false)
-      this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx - 1)
     }
+    // onNextButtonPressed () {
+    //   this.$store.commit(SET_IS_PLAYING, false)
+    //   this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx + 1)
+    // },
+    // onPrevButtonPressed () {
+    //   this.$store.commit(SET_IS_PLAYING, false)
+    //   this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx - 1)
+    // }
   },
   watch: {
-    currentTrack () {
+    trackFile () {
       this.loadCurrentTrack()
     }
   }
