@@ -1,34 +1,6 @@
 {
   "tracks": [
     {
-      "title": "Shine On You Crazy Diamond",
-      "subtitles": [{
-        "file": "poema-6"
-      }, {
-        "file": "poema-7"
-      }, {
-        "file": "poema-8"
-      }],
-      "sound": {
-        "file": "shine.mp3",
-        "markers": [
-          {
-            "label": "Te vienes con nosotros",
-            "time": "02:29",
-            "pullUp": true
-          },
-          {
-            "label": "La voiture démarre",
-            "time": "03:47"
-          },
-          {
-            "time": "08:26",
-            "label": "Remember when we were young..."
-          }
-        ]
-      }
-    },
-    {
       "title": "Noche Negra",
       "subtitles": [{
         "file": "poema-1"
@@ -87,6 +59,34 @@
         "La fille ainée de la famille gitane a hurlé que l’essence c’était de l’arnaque et qu’il valait mieux voyager en train, car c’était moins cher. Alors on a passé tout le voyage à hurler et à débattre, en étant toujours d’accord sur tout.",
         "Le motard est descendu à Valence et les autres on a continué le voyage jusqu’à Barcelone. A la gare de Sants on s’est dit au revoir et j’ai vu le punk partir d’un coté et la famille de gitans de l’autre. Puis j’ai acheté le billet de train de proximité qui m’amènerait jusqu’à chez mon père."
       ]
+    },
+    {
+      "title": "Shine On You Crazy Diamond",
+      "subtitles": [{
+        "file": "poema-6"
+      }, " ", {
+        "file": "poema-7"
+      }, " ", {
+        "file": "poema-8"
+      }, " "],
+      "sound": {
+        "file": "shine.mp3",
+        "markers": [
+          {
+            "label": "Te vienes con nosotros",
+            "time": "02:29",
+            "pullUp": true
+          },
+          {
+            "label": "La voiture démarre",
+            "time": "03:47"
+          },
+          {
+            "time": "08:26",
+            "label": "Remember when we were young..."
+          }
+        ]
+      }
     },
     {
       "title": "Todavía el agua",

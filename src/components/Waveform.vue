@@ -42,6 +42,10 @@ export default {
     this.loadCurrentTrack()
     this.$events.listen('play-button-pressed', this.togglePlay)
   },
+  beforeDestroy () {
+    this.pause()
+    this.$events.$off('play-button-pressed')
+  },
   methods: {
     togglePlay () {
       if (this.$store.state.isPlaying) {
@@ -62,6 +66,7 @@ export default {
       this.$emit('progress', this.waveform.getCurrentTime())
     },
     loadCurrentTrack () {
+      this.pause()
       if (this.waveform && this.trackFile) {
         this.waveform.load('static/' + this.trackFile)
       }
