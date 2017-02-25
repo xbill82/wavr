@@ -1,7 +1,6 @@
 import Vuex from 'vuex'
 import Vue from 'vue'
 import * as types from './types'
-import * as utils from '../utils'
 
 Vue.use(Vuex)
 
@@ -31,7 +30,11 @@ export default new Vuex.Store({
       }
     },
     [types.SET_CURRENT_TRACK_DURATION] (state, value) {
-      Vue.set(state.playlist.tracks[state.currentTrackIdx], 'duration', value)
+      if (!state.playlist.tracks[state.currentTrackIdx] ||
+          !state.playlist.tracks[state.currentTrackIdx].sound) {
+        return null
+      }
+      Vue.set(state.playlist.tracks[state.currentTrackIdx].sound, 'duration', value)
     },
     [types.SET_WAVEFORM_WIDTH] (state, value) {
       state.waveformWidth = value
@@ -58,20 +61,6 @@ export default new Vuex.Store({
       }
 
       return getters.currentTrack
-    },
-    pxPerSec (state, getters) {
-      return state.waveformWidth / getters.currentTrack.duration
-    },
-    currentMarkers (state, getters) {
-      if (!getters.currentTrack || !getters.currentTrack.markers) {
-        return []
-      }
-      return getters.currentTrack.markers.map(marker => {
-        return {
-          ...marker,
-          timestamp: utils.timeToSeconds(marker.time)
-        }
-      })
     }
   }
 })

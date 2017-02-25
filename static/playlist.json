@@ -1,6 +1,28 @@
 {
   "tracks": [
     {
+      "type": "Sound",
+      "title": "Shine On You Crazy Diamond",
+      "sound": {
+        "file": "shine.mp3",
+        "markers": [
+          {
+            "label": "Te vienes con nosotros",
+            "time": "02:29",
+            "pullUp": true
+          },
+          {
+            "label": "La voiture démarre",
+            "time": "03:47"
+          },
+          {
+            "time": "08:26",
+            "label": "Remember when we were young..."
+          }
+        ]
+      }
+    },
+    {
       "type": "Subtitles",
       "title": "Noche Negra",
       "subtitles": [{
@@ -87,28 +109,6 @@
       "subtitles": [{
         "file": "poema-8"
       }]
-    },
-    {
-      "type": "Sound",
-      "title": "Shine On You Crazy Diamond",
-      "sound": {
-        "file": "shine.mp3",
-        "markers": [
-          {
-            "label": "Te vienes con nosotros",
-            "time": "02:29",
-            "pullUp": true
-          },
-          {
-            "label": "La voiture démarre",
-            "time": "03:47"
-          },
-          {
-            "time": "08:26",
-            "label": "Remember when we were young..."
-          }
-        ]
-      }
     },
     {
       "type": "Subtitles",

@@ -3,8 +3,8 @@
     <div class="block-1" >
       <div
         class="track-title"
-        v-if="currentTrack">
-        {{currentTrack.title}}
+        v-if="sound">
+        {{sound.title}}
       </div>
       <div class="progress">
         {{secondsToTime(progress)}}
@@ -30,14 +30,14 @@
         :isNext="isNextMarker(marker)">
       </wave-marker>
       <waveform
-        @progress="updateProgress">
+        @progress="updateProgress"
+        :track-file="currentSoundFile">
       </waveform>
     </div>
   </div>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
 import Waveform from './Waveform'
 import WaveMarker from './Marker'
 import NextMarker from './NextMarker'
@@ -60,16 +60,37 @@ export default {
     }
   },
   computed: {
+    sound () {
+      if (!this.track) {
+        return null
+      }
+      return this.track.sound
+    },
+    currentSoundFile () {
+      if (!this.sound) {
+        return null
+      }
+      return this.sound.file
+    },
     nextMarker () {
       return this.currentMarkers.find(marker => {
         return marker.timestamp > this.progress
       })
     },
-    ...mapGetters([
-      'currentTrack',
-      'pxPerSec',
-      'currentMarkers'
-    ])
+    currentMarkers () {
+      if (!this.sound || !this.sound.markers) {
+        return []
+      }
+      return this.sound.markers.map(marker => {
+        return {
+          ...marker,
+          timestamp: timeToSeconds(marker.time)
+        }
+      })
+    },
+    pxPerSec () {
+      return this.$store.state.waveformWidth / this.sound.duration
+    }
   },
   methods: {
     timeToMarkerPosition (time) {
@@ -88,7 +109,7 @@ export default {
     secondsToTime
   },
   watch: {
-    currentTrack () {
+    track () {
       this.progress = 0
     }
   }

@@ -1,5 +1,7 @@
 <template>
-  <div class="waveform">
+  <div
+    ref="waveform"
+    class="waveform">
     <div class="wave-container">
     </div>
   </div>
@@ -13,7 +15,6 @@ import {
   SET_CURRENT_TRACK,
   SET_CURRENT_TRACK_DURATION
 } from '../store/types'
-import { mapGetters } from 'vuex'
 
 export default {
   name: 'Waveform',
@@ -22,6 +23,7 @@ export default {
       waveform: null
     }
   },
+  props: ['trackFile'],
   mounted () {
     this.waveform = window.waveform = WaveSurfer.create({
       container: this.$refs.waveform,
@@ -63,8 +65,8 @@ export default {
       this.$emit('progress', this.waveform.getCurrentTime())
     },
     loadCurrentTrack () {
-      if (this.waveform && this.currentTrack && this.currentTrack.file) {
-        this.waveform.load('static/' + this.currentTrack.file)
+      if (this.waveform && this.trackFile) {
+        this.waveform.load('static/' + this.trackFile)
       }
     },
     onNextButtonPressed () {
@@ -75,11 +77,6 @@ export default {
       this.$store.commit(SET_IS_PLAYING, false)
       this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx - 1)
     }
-  },
-  computed: {
-    ...mapGetters([
-      'currentTrack'
-    ])
   },
   watch: {
     currentTrack () {
