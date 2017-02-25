@@ -1,12 +1,6 @@
 <template>
   <div class="waveform">
-    <div 
-      tabindex="0"
-      class="wave-container"
-      @keyup.play="togglePlay"
-      @keyup.next="onNextButtonPressed"
-      @keyup.prev="onPrevButtonPressed"
-      ref="waveform">
+    <div class="wave-container">
     </div>
   </div>
 </template>
@@ -45,11 +39,9 @@ export default {
       this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx + 1)
     })
     this.waveform.on('audioprocess', this.onProgress)
-    this.$refs.waveform.focus()
-    this.$refs.waveform.addEventListener('blur', () => {
-      this.$refs.waveform.focus()
-    })
     this.loadCurrentTrack()
+    this.$events.listen('next-button-pressed', this.onNextButtonPressed)
+    this.$events.listen('prev-button-pressed', this.onPrevButtonPressed)
   },
   methods: {
     togglePlay () {

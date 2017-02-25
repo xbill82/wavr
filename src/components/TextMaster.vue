@@ -1,12 +1,7 @@
 <template>
   <div
     class="text-master">
-    <div 
-      class="track-title"
-      ref="container"
-      tabindex="0"
-      @keyup.next="onNextButtonPressed"
-      @keyup.prev="onPrevButtonPressed">
+    <div class="track-title">
       {{track.title}}
     </div>
     <div class="blob-block">
@@ -24,15 +19,13 @@
 
 <script>
 import { SET_CURRENT_TRACK } from '../store/types'
-import { getSlaveWindow } from '../services/window'
 
 export default {
   name: 'TextMaster',
   props: ['track'],
   data () {
     return {
-      currentIndex: -1,
-      slaveWindow: null
+      currentIndex: -1
     }
   },
   computed: {
@@ -59,13 +52,6 @@ export default {
         return [ require('../../static/' + this.track.file + '.html') ]
       }
     }
-  },
-  mounted () {
-    this.slaveWindow = getSlaveWindow()
-    this.$refs.container.focus()
-    this.$refs.container.addEventListener('blur', () => {
-      this.$refs.container.focus()
-    })
   },
   methods: {
     onNextButtonPressed () {
@@ -96,6 +82,10 @@ export default {
         content: blob
       }, '*')
     }
+  },
+  mounted () {
+    this.$events.listen('next-button-pressed', this.onNextButtonPressed)
+    this.$events.listen('prev-button-pressed', this.onPrevButtonPressed)
   }
 }
 </script>

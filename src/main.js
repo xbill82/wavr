@@ -4,7 +4,9 @@ import store from './store'
 import Router from 'vue-router'
 import Master from './Components/Master'
 import TextSlave from './Components/TextSlave'
+import VueEvents from 'vue-events'
 
+Vue.use(VueEvents)
 Vue.use(Router)
 Vue.config.keyCodes = {
   next: [51, 39],
