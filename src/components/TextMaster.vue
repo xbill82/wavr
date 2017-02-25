@@ -50,25 +50,6 @@ export default {
       }
       return subtitle
     },
-    // onNextButtonPressed () {
-    //   if (this.currentIndex === this.subtitles.length - 1) {
-    //     this.currentIndex = -1
-    //     this.sendBlobToSlave('')
-    //     this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx + 1)
-    //     return
-    //   }
-    //   this.currentIndex++
-    //   this.sendBlobToSlave(this.currentTextBlob)
-    // },
-    // onPrevButtonPressed () {
-    //   if (this.currentIndex < 0) {
-    //     this.sendBlobToSlave('')
-    //     this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx - 1)
-    //     return
-    //   }
-    //   this.currentIndex--
-    //   this.sendBlobToSlave(this.currentTextBlob)
-    // },
     sendBlobToSlave (blob) {
       let slaveWindow = getSlaveWindow()
       if (!slaveWindow) {
@@ -80,9 +61,10 @@ export default {
       }, '*')
     }
   },
-  mounted () {
-    // this.$events.listen('next-button-pressed', this.onNextButtonPressed)
-    // this.$events.listen('prev-button-pressed', this.onPrevButtonPressed)
+  watch: {
+    currentTextBlob (blob) {
+      this.sendBlobToSlave(blob)
+    }
   }
 }
 </script>

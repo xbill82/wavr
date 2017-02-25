@@ -7,7 +7,6 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     playlist: null,
-    currentTrackIdx: 0,
     waveformWidth: null,
     isPlaying: false,
     head: {
@@ -46,23 +45,12 @@ export default new Vuex.Store({
         }
       }
     },
-    [types.SET_CURRENT_TRACK] (state, value) {
-      if (value === null || value === undefined) {
-        return
-      }
-      if (value > state.playlist.tracks.length - 1 ||
-          value < 0) {
-        state.currentTrackIdx = 0
-      } else {
-        state.currentTrackIdx = value
-      }
-    },
     [types.SET_CURRENT_TRACK_DURATION] (state, value) {
-      if (!state.playlist.tracks[state.currentTrackIdx] ||
-          !state.playlist.tracks[state.currentTrackIdx].sound) {
+      if (!state.playlist.tracks[state.head.track] ||
+          !state.playlist.tracks[state.head.track].sound) {
         return null
       }
-      Vue.set(state.playlist.tracks[state.currentTrackIdx].sound, 'duration', value)
+      Vue.set(state.playlist.tracks[state.head.track].sound, 'duration', value)
     },
     [types.SET_WAVEFORM_WIDTH] (state, value) {
       state.waveformWidth = value

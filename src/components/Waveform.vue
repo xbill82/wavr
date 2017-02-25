@@ -37,7 +37,6 @@ export default {
     })
     this.waveform.on('finish', () => {
       this.$store.commit(SET_IS_PLAYING, false)
-      // this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx + 1)
     })
     this.waveform.on('audioprocess', this.onProgress)
     this.loadCurrentTrack()
@@ -67,14 +66,6 @@ export default {
         this.waveform.load('static/' + this.trackFile)
       }
     }
-    // onNextButtonPressed () {
-    //   this.$store.commit(SET_IS_PLAYING, false)
-    //   this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx + 1)
-    // },
-    // onPrevButtonPressed () {
-    //   this.$store.commit(SET_IS_PLAYING, false)
-    //   this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx - 1)
-    // }
   },
   watch: {
     trackFile () {

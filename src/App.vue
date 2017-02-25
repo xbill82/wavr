@@ -9,8 +9,7 @@
 <script>
 import {} from 'assets/fonts.css'
 import {
-  SET_PLAYLIST,
-  SET_CURRENT_TRACK
+  SET_PLAYLIST
 } from './store/types'
 
 export default {
@@ -23,7 +22,6 @@ export default {
   mounted () {
     require.ensure(['../static/playlist.json'], (require) => {
       this.$store.commit(SET_PLAYLIST, require('../static/playlist.json'))
-      this.$store.commit(SET_CURRENT_TRACK, 0)
     })
   }
 }
