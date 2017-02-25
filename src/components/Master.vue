@@ -80,12 +80,10 @@ export default {
   methods: {
     onNextButtonPressed () {
       this.$events.fire('next-button-pressed')
-      console.log('increment!')
       this.$store.commit(INCREMENT_HEAD)
     },
     onPrevButtonPressed () {
       this.$events.fire('prev-button-pressed')
-      console.log('decrement!')
       this.$store.commit(DECREMENT_HEAD)
     },
     onPlayButtonPressed () {

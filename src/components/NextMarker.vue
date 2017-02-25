@@ -29,7 +29,7 @@ export default {
         )
       } else {
         return secondsToTime(
-          Number(this.$store.getters.currentTrack.duration) -
+          Number(this.$store.getters.currentTrack.sound.duration) -
           Number(this.progress)
         )
       }
