@@ -77,6 +77,10 @@ export default {
       this.$refs.container.focus()
     })
   },
+  beforeDestroy () {
+    this.$events.$off('next-button-pressed')
+    this.$events.$off('prev-button-pressed')
+  },
   methods: {
     onNextButtonPressed () {
       this.$events.fire('next-button-pressed')
