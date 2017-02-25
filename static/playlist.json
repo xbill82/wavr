@@ -3,27 +3,35 @@
     {
       "type": "Subtitles",
       "title": "Noche Negra",
-      "file": "poema-1"
+      "subtitles": [{
+        "file": "poema-1"
+      }]
     },
     {
       "type": "Subtitles",
       "title": "Sin título",
-      "file": "poema-2"
+      "subtitles": [{
+        "file": "poema-2"
+      }]
     },
     {
       "type": "Subtitles",
       "title": "Hogar",
-      "file": "poema-3"
+      "subtitles": [{
+        "file": "poema-3"
+      }]
     },
     {
       "type": "Subtitles",
       "title": "Al menos esta noche",
-      "file": "poema-4"
+      "subtitles": [{
+        "file": "poema-4"
+      }]
     },
     {
       "type": "Subtitles",
       "title": "Avignon",
-      "list": [
+      "subtitles": [
         "J’ai pris mon premier train à Grenade en 2004. J’ai choisi cette ville pour devenir adulte et être poète. Ce que je ne savais pas, c’est que j’allais faire du théâtre.",
         "Je suis tombé amoureux d’une camarade de l’école d’art dramatique et nous avons préparé un spectacle de rue, pour travailler au festival d’Avignon.",
         "Après notre première représentation, elle a décidé de jouer toute seule et moi, d’aller à la place du Palais des Papes. J’ai mis mon costume de clown, je suis monté sur un mur et je suis resté immobile, à l’attente des pièces de monnaie qui allaient me faire bouger.",
@@ -38,12 +46,14 @@
     {
       "type": "Subtitles",
       "title": "Uno",
-      "file": "poema-5"
+      "subtitles": [{
+        "file": "poema-5"
+      }]
     },
     {
       "type": "Subtitles",
       "title": "El precio de la gasolina",
-      "list": [
+      "subtitles": [
         "Le feu est passé au vert. Nous nous sommes garés, ma compagne et moi, au parking de la gare de Granada. Nous avons mis fin à notre relation sur le quai. Je suis monté dans le train en pleurant et je me suis assis à ma place.",
         "A ma gauche il y avait une famille de gitans qui parlait très fort. En face, un punk. A ma droite, un jeune motard et en face de lui je crois qu’il y avait une fille qui écoutait de la musique. Je voulais voir personne.",
         "Je suis resté en silence et j’ai écouté les gitans qui parlaient de leur business de vente et achat de vêtements. Lorsque le contrôleur est passé, je lui ai demandé si je pouvais être changé de place. Mais j’ai pas eu de chance.",
@@ -60,48 +70,60 @@
     {
       "type": "Subtitles",
       "title": "La Cabeza del Diablo",
-      "file": "poema-6"
+      "subtitles": [{
+        "file": "poema-6"
+      }]
     },
     {
       "type": "Subtitles",
       "title": "Las olas en el acantilado",
-      "file": "poema-7"
+      "subtitles": [{
+        "file": "poema-7"
+      }]
     },
     {
       "type": "Subtitles",
       "title": "La raíz de la noche",
-      "file": "poema-8"
+      "subtitles": [{
+        "file": "poema-8"
+      }]
     },
     {
       "type": "Sound",
-      "file": "shine.mp3",
       "title": "Shine On You Crazy Diamond",
-      "markers": [
-        {
-          "label": "Te vienes con nosotros",
-          "time": "02:29",
-          "pullUp": true
-        },
-        {
-          "label": "La voiture démarre",
-          "time": "03:47"
-        },
-        {
-          "time": "08:26",
-          "label": "Remember when we were young..."
-        }
-      ]
+      "sound": {
+        "file": "shine.mp3",
+        "markers": [
+          {
+            "label": "Te vienes con nosotros",
+            "time": "02:29",
+            "pullUp": true
+          },
+          {
+            "label": "La voiture démarre",
+            "time": "03:47"
+          },
+          {
+            "time": "08:26",
+            "label": "Remember when we were young..."
+          }
+        ]
+      }
     },
     {
       "type": "Subtitles",
       "title": "Todavía el agua",
-      "file": "poema-9"
+      "subtitles": [{
+        "file": "poema-9"
+      }]
     },
     {
       "type": "Sound",
-      "file": "transporte.mp3",
       "title": "Transporte",
-      "markers": []
+      "sound": {
+        "file": "transporte.mp3",    
+        "markers": []
+      }
     }
   ]
 }

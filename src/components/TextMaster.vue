@@ -19,6 +19,7 @@
 
 <script>
 import { SET_CURRENT_TRACK } from '../store/types'
+import { getSlaveWindow } from '../services/window'
 
 export default {
   name: 'TextMaster',
@@ -30,32 +31,33 @@ export default {
   },
   computed: {
     nextTextBlob () {
-      if (this.currentIndex === this.textList.length - 1) {
+      if (this.currentIndex === this.subtitles.length - 1) {
         return null
       }
-      return this.textList[this.currentIndex + 1]
+      return this.getSubtitle(this.subtitles[this.currentIndex + 1])
     },
     currentTextBlob () {
       if (this.currentIndex < 0) {
         return null
       }
-      return this.textList[this.currentIndex]
+      return this.getSubtitle(this.subtitles[this.currentIndex])
     },
-    textList () {
-      if (!this.track || (!this.track.list && !this.track.file)) {
+    subtitles () {
+      if (!this.track) {
         return null
       }
-      if (this.track.list) {
-        return this.track.list
-      }
-      if (this.track.file) {
-        return [ require('../../static/' + this.track.file + '.html') ]
-      }
+      return this.track.subtitles
     }
   },
   methods: {
+    getSubtitle (subtitle) {
+      if (typeof subtitle === 'object') {
+        return require('../../static/' + subtitle.file + '.html')
+      }
+      return subtitle
+    },
     onNextButtonPressed () {
-      if (this.currentIndex === this.textList.length - 1) {
+      if (this.currentIndex === this.subtitles.length - 1) {
         this.currentIndex = -1
         this.sendBlobToSlave('')
         this.$store.commit(SET_CURRENT_TRACK, this.$store.state.currentTrackIdx + 1)
@@ -74,10 +76,11 @@ export default {
       this.sendBlobToSlave(this.currentTextBlob)
     },
     sendBlobToSlave (blob) {
-      if (!this.slaveWindow) {
+      let slaveWindow = getSlaveWindow()
+      if (!slaveWindow) {
         return
       }
-      this.slaveWindow.postMessage({
+      slaveWindow.postMessage({
         type: 'textBlob',
         content: blob
       }, '*')
