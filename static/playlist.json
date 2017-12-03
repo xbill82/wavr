@@ -18,7 +18,7 @@
         "La première fois que j'au vu Luca, j'étais en train de travailler",
         "il était la seule personne assise à une terrasse de tables vides.",
         "",
-        "Au fur et à mesure que je faisais mon discours commercial, je voyais qu'il y comprenait rien.",
+        "Au fur et à mesure que je faisais mon discours, je voyais qu'il y comprenait rien.",
         "C'était un jour de merde. Il n'allait rien acheter.",
         "",
         "Il m'a donné 4 euros, c'était définitivement un jour de merde. Malgré ça, je le trouvais sympa.",
@@ -50,8 +50,10 @@
       ]
     },
     {
-      "title": "Luca: Noche de larga distancia *TODO*",
-      "subtitles": []
+      "title": "Luca: Noche de larga distancia",
+      "subtitles": [{
+        "file": "noche-de-larga-distancia"
+      }]
     },
     {
       "title": "Los increíbles de la calma",
@@ -71,8 +73,14 @@
       ]
     },
     {
-      "title": "Danilo: Salida de emergencia *TODO*",
-      "subtitles": []
+      "title": "Danilo: Salida de emergencia",
+      "subtitles": [{
+        "file": "salida-de-emergencia-1"
+      }, {
+        "file": "salida-de-emergencia-2"
+      }, {
+        "file": "salida-de-emergencia-3"
+      }]
     },
     {
       "title": "Momento de ruptura",
@@ -135,7 +143,7 @@
       }
     },
     {
-      "title": "Los increíbles del absurdo *TODO*",
+      "title": "Los increíbles del absurdo",
       "subtitles": [
         "L'incroyable art de rater le train mais de dire que tu l'as eu",
         "",
@@ -154,7 +162,7 @@
         "L'incroyable art d'appeler la femme que tu n'aimes pas et qu'elle réponde", "",
         "L'incroyable art de pleurer en cachette dans un train", "",
         "... de renifler sous les bras d'un dinosaur", "",
-        "L'incroyable art de sentir tous tes amis te manquent, dans un train", "",
+        "L'incroyable art de sentir que tous tes amis te manquent, dans un train", "",
         "L'incroyable art de voyager pour ne pas revenir dans un train", "",
         "L'incroyable art d'être quelqu'un d'autre dans un train", "",
         "L'incroyable art de prendre le train parce que"
@@ -163,12 +171,14 @@
     {
       "title": "Luca: Granada-Montpellier solo ida (con Todavía el Agua)",
       "subtitles": [{
-        "file": "poema-9"
-      }, ""]
+        "file": "todavia-el-agua"
+      }]
     },
     {
-      "title": "Danilo: Retraso  *TODO*",
-      "subtitles": []
+      "title": "Danilo: Retraso",
+      "subtitles": [{
+        "file": "retraso"
+      }]
     },
     {
       "title": "Transporte",
