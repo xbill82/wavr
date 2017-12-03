@@ -1,48 +1,37 @@
 {
   "tracks": [
     {
-      "title": "Noche Negra",
-      "subtitles": [{
-        "file": "poema-1"
-      }]
-    },
-    {
-      "title": "Sin título",
-      "subtitles": [{
-        "file": "poema-2"
-      }]
-    },
-    {
-      "title": "Hogar",
-      "subtitles": [{
-        "file": "poema-3"
-      }]
-    },
-    {
-      "title": "Al menos esta noche",
-      "subtitles": [{
-        "file": "poema-4"
-      }]
-    },
-    {
-      "title": "Avignon",
+      "title": "El increíble arte",
       "subtitles": [
-        "J’ai pris mon premier train à Grenade en 2004. J’ai choisi cette ville pour devenir adulte et être poète. Ce que je ne savais pas, c’est que j’allais faire du théâtre.",
-        "Je suis tombé amoureux d’une camarade de l’école d’art dramatique et nous avons préparé un spectacle de rue, pour travailler au festival d’Avignon.",
-        "Après notre première représentation, elle a décidé de jouer toute seule et moi, d’aller à la place du Palais des Papes. J’ai mis mon costume de clown, je suis monté sur un mur et je suis resté immobile, à l’attente des pièces de monnaie qui allaient me faire bouger.",
-        "Après quelques minutes, deux groupes d’épéistes avec perruques victoriennes se sont plantés devant moi en faisant choquer leurs épées en déclamant des vers de Molière. Ils m’ont rendu complètement invisible.",
-        "Je suis descendu du mur et j’ai marché jusqu’au centre de la place. J’ai monté quelques marches de l’escalier et je me suis immobilisé à nouveau, toujours en attente des pièces de monnaie.",
-        "Deux-cents tambours ont sonné derrière moi pendant que des mammouths géants faisaient leur entrée dans la place. Dedans, des musiciens d’heavy metal jouaient des chansons électriques, pendant que les animaux crachaient du feu. Bien évidemment, ça m’a rendu invisible.",
-        "Je suis descendu de l’escalier et je suis parti dans une impasse à l’autre bout de la place, pour m’installer sous un lampion éteint. C’était une toute petite impasse que personne ne fréquentait, même pas pour pisser. L’endroit parfait pour pouvoir faire tranquillement la statue humaine.",
-        "Peu de temps après, une vieille dame a marché jusqu’á mon emplacement, a ouvert son porte-monnaie, en a sorti deux euros pour les mettre dans mon chapeau. « Ça fait toute l’après-midi que je te vois » m’a dit elle.",
-        "Elle a fait demi-tour et s’est frayée un chemin à travers de l’énorme place, je l’ai vu se perdre entre le tonnerre des tambours, les mammouths géants qui crachaient du feu au rythme du heavy metal et les épéistes qui déclamaient Molière."
+        "L'incroyable art de rater le train à nouveau",
+        "",
+        "L'incroyable art de rater le métro qui t'amène au bus qui t'amène à la gare",
+        "",
+        "L'incroyable art de voir le train qui s'en va"
       ]
     },
     {
-      "title": "Uno",
-      "subtitles": [{
-        "file": "poema-5"
-      }]
+      "title": "La primera vez",
+      "subtitles": [
+        "La deuxième fois que j'ai vu Luca, il courait",
+        "",
+        "La première fois que j'au vu Luca, j'étais en train de travailler",
+        "il était la seule personne assise à une terrasse de tables vides.",
+        "",
+        "Au fur et à mesure que je faisais mon discours commercial, je voyais qu'il y comprenait rien.",
+        "C'était un jour de merde. Il n'allait rien acheter.",
+        "",
+        "Il m'a donné 4 euros, c'était définitivement un jour de merde. Malgré ça, je le trouvais sympa.",
+        "",
+        "Suivant mon protocole, je l'ai quitté aimablement et je suis parti tenter ma chance ailleurs.",
+        "",
+        "La deuxième fois que j'ai vu Luca, il courait, il transpirait. Moi aussi.",
+        "On s'est arrêtés sur le quai principal de la gare de Granada. On venait de rater le train."
+      ]
+    },
+    {
+      "title": "Presentation",
+      "subtitles": []
     },
     {
       "title": "El precio de la gasolina",
@@ -58,6 +47,63 @@
         "Les pièces venaient de la moto de son frère, qui était mort dans un accident, quelques mois avant. Pour cette raison là, lorsqu’il allait la voir à Grenade, il voyageait en train.",
         "La fille ainée de la famille gitane a hurlé que l’essence c’était de l’arnaque et qu’il valait mieux voyager en train, car c’était moins cher. Alors on a passé tout le voyage à hurler et à débattre, en étant toujours d’accord sur tout.",
         "Le motard est descendu à Valence et les autres on a continué le voyage jusqu’à Barcelone. A la gare de Sants on s’est dit au revoir et j’ai vu le punk partir d’un coté et la famille de gitans de l’autre. Puis j’ai acheté le billet de train de proximité qui m’amènerait jusqu’à chez mon père."
+      ]
+    },
+    {
+      "title": "Luca: Noche de larga distancia *TODO*",
+      "subtitles": []
+    },
+    {
+      "title": "Los increíbles de la calma",
+      "subtitles": [
+        "L'icroyable art de se reposer dans le train",
+        "",
+        "L'incroyable art de méditer dans le train",
+        "",
+        "L'incroyable art de prévoir d'arriver tard au travail pendant le voyage en train",
+        "",
+        "L'incroyable art de respirer dans un train bondé",
+        "",
+        "L'incroyable art de supporter la musique qui sort des écouteurs de l'autre passager",
+        "",
+        "L'incroyable art de supporter le bébé qui pleure dans le train",
+        ""
+      ]
+    },
+    {
+      "title": "Danilo: Salida de emergencia *TODO*",
+      "subtitles": []
+    },
+    {
+      "title": "Momento de ruptura",
+      "subtitles": []
+    },
+    {
+      "title": "Luca: empecé a contar",
+      "subtitles": []
+    },
+    {
+      "title": "Danilo: Avignon",
+      "subtitles": [
+        "J’ai pris mon premier train à Grenade en 2004. J’ai choisi cette ville pour devenir adulte et être poète. Ce que je ne savais pas, c’est que j’allais faire du théâtre.",
+        "Je suis tombé amoureux d’une camarade de l’école d’art dramatique et nous avons préparé un spectacle de rue, pour travailler au festival d’Avignon.",
+        "Après notre première représentation, elle a décidé de jouer toute seule et moi, d’aller à la place du Palais des Papes. J’ai mis mon costume de clown, je suis monté sur un mur et je suis resté immobile, à l’attente des pièces de monnaie qui allaient me faire bouger.",
+        "Après quelques minutes, deux groupes d’épéistes avec perruques victoriennes se sont plantés devant moi en faisant choquer leurs épées en déclamant des vers de Molière. Ils m’ont rendu complètement invisible.",
+        "Je suis descendu du mur et j’ai marché jusqu’au centre de la place. J’ai monté quelques marches de l’escalier et je me suis immobilisé à nouveau, toujours en attente des pièces de monnaie.",
+        "Deux-cents tambours ont sonné derrière moi pendant que des mammouths géants faisaient leur entrée dans la place. Dedans, des musiciens d’heavy metal jouaient des chansons électriques, pendant que les animaux crachaient du feu. Bien évidemment, ça m’a rendu invisible.",
+        "Je suis descendu de l’escalier et je suis parti dans une impasse à l’autre bout de la place, pour m’installer sous un lampion éteint. C’était une toute petite impasse que personne ne fréquentait, même pas pour pisser. L’endroit parfait pour pouvoir faire tranquillement la statue humaine.",
+        "Peu de temps après, une vieille dame a marché jusqu’á mon emplacement, a ouvert son porte-monnaie, en a sorti deux euros pour les mettre dans mon chapeau. « Ça fait toute l’après-midi que je te vois » m’a dit elle.",
+        "Elle a fait demi-tour et s’est frayée un chemin à travers de l’énorme place, je l’ai vu se perdre entre le tonnerre des tambours, les mammouths géants qui crachaient du feu au rythme du heavy metal et les épéistes qui déclamaient Molière."
+      ]
+    },
+    {
+      "title": "Luca: Nicola Russo y la pelota",
+      "subtitles": []
+    },
+    {
+      "title": "Interlude",
+      "subtitles": [
+        "Ce qui est bien de rater le train c'est qu'après t'as toute la journée devant toi."
       ]
     },
     {
@@ -89,10 +135,40 @@
       }
     },
     {
-      "title": "Todavía el agua",
+      "title": "Los increíbles del absurdo *TODO*",
+      "subtitles": [
+        "L'incroyable art de rater le train mais de dire que tu l'as eu",
+        "",
+        "L'incroyable art de traverser un pays", "",
+        "L'incoyable art de se perdre dans un train", "",
+        "L'incroyable art de dévier un train", "",
+        "L'incroyable art de psychalaiser un clown dans un train", "",
+        "... de faire du rafting dans un train", "",
+        "L'incroyable art de déguiser un poney en licorne dans un train", "",
+        "L'incroyable art d'accoucher dans un train", "",
+        "... de couvrir de plumes rose les murs du train", "",
+        "L'incroyable art de faire rire tout le monde dans un train", "",
+        "L'incroyable art de manger une raclette dans un train", "",
+        "... d'embrasser la fenêtre du train", "",
+        "L'incroyable art de tomber amoureux de la femme qui ne t'appelle pas, dans un train", "",
+        "L'incroyable art d'appeler la femme que tu n'aimes pas et qu'elle réponde", "",
+        "L'incroyable art de pleurer en cachette dans un train", "",
+        "... de renifler sous les bras d'un dinosaur", "",
+        "L'incroyable art de sentir tous tes amis te manquent, dans un train", "",
+        "L'incroyable art de voyager pour ne pas revenir dans un train", "",
+        "L'incroyable art d'être quelqu'un d'autre dans un train", "",
+        "L'incroyable art de prendre le train parce que"
+      ]
+    },
+    {
+      "title": "Luca: Granada-Montpellier solo ida (con Todavía el Agua)",
       "subtitles": [{
         "file": "poema-9"
       }, ""]
+    },
+    {
+      "title": "Danilo: Retraso  *TODO*",
+      "subtitles": []
     },
     {
       "title": "Transporte",
